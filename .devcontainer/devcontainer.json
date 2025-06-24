@@ -1,0 +1,196 @@
+{
+  "name": "Quasar Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Vue.js Essential Extensions
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin",
+        
+        // JavaScript/TypeScript Support
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        
+        // Linting and Formatting
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        
+        // Quasar Specific
+        "abdelaziz18003.quasar-snippets",
+        
+        // HTML/CSS Support
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "bradlc.vscode-tailwindcss",
+        "zignd.html-css-class-completion",
+        
+        // Git Integration
+        "eamodio.gitlens",
+        
+        // Utilities
+        "christian-kohler.path-intellisense",
+        "christian-kohler.npm-intellisense",
+        "wix.vscode-import-cost",
+        "usernamehw.errorlens",
+        "oderwat.indent-rainbow",
+        "CoenraadS.bracket-pair-colorizer-2",
+        "ms-vscode.vscode-json",
+        
+        // Debugging
+        "ms-vscode.js-debug",
+        
+        // Additional Development Tools
+        "rangav.vscode-thunder-client",
+        "ms-vscode.vscode-js-profile-flame",
+        "ritwickdey.liveserver",
+        "gruntfuggly.todo-tree",
+        "wayou.vscode-todo-highlight",
+        
+        // Format and Code Quality
+        "emeraldwalk.runonsave",
+        "natewallace.angular2-inline"
+      ],
+      
+      "settings": {
+        // Editor Configuration
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        
+        // ESLint Configuration
+        "eslint.validate": [
+          "javascript",
+          "javascriptreact", 
+          "typescript",
+          "typescriptreact",
+          "vue"
+        ],
+        "eslint.workingDirectories": [
+          "."
+        ],
+        
+        // Vue/Volar Configuration
+        "vue.inlayHints.missingProps": true,
+        "vue.inlayHints.optionsWrapper": true,
+        "vue.inlayHints.inlineHandlerLeading": true,
+        "vue.inlayHints.destructuringRestProps": true,
+        "vue.server.hybridMode": true,
+        
+        // TypeScript Configuration
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "typescript.suggest.autoImports": true,
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "typescript.preferences.importModuleSpecifier": "relative",
+        
+        // File Associations
+        "files.associations": {
+          "*.vue": "vue"
+        },
+        
+        // Emmet Configuration
+        "emmet.includeLanguages": {
+          "vue-html": "html",
+          "vue": "html"
+        },
+        
+        // Auto-completion and IntelliSense
+        "html.suggest.html5": true,
+        "css.validate": true,
+        "scss.validate": true,
+        
+        // Git Configuration
+        "git.enableSmartCommit": true,
+        "git.confirmSync": false,
+        "git.autofetch": true,
+        
+        // Terminal Configuration
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.fontSize": 14,
+        
+        // Search Configuration
+        "search.exclude": {
+          "**/node_modules": true,
+          "**/dist": true,
+          "**/.quasar": true,
+          "**/coverage": true
+        },
+        
+        // File Explorer Configuration
+        "explorer.compactFolders": false,
+        "explorer.confirmDelete": false,
+        "explorer.confirmDragAndDrop": false,
+        
+        // Workbench Configuration
+        "workbench.iconTheme": "vs-seti",
+        "workbench.editor.enablePreview": false,
+        "workbench.editor.enablePreviewFromQuickOpen": false,
+        
+        // Performance
+        "typescript.disableAutomaticTypeAcquisition": false,
+        "typescript.preferences.includePackageJsonAutoImports": "on",
+        
+        // Debugging Configuration
+        "debug.allowBreakpointsEverywhere": true,
+        "debug.inlineValues": "on",
+        
+        // Extensions Configuration
+        "gitlens.codeLens.enabled": false,
+        "gitlens.currentLine.enabled": false,
+        "importCost.mediumPackageSize": 50,
+        "importCost.largePackageSize": 100,
+        
+        // Tailwind CSS (if used with Quasar)
+        "tailwindCSS.includeLanguages": {
+          "vue": "html",
+          "vue-html": "html"
+        },
+        "tailwindCSS.experimental.classRegex": [
+          "class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]"
+        ]
+      }
+    }
+  },
+
+  "forwardPorts": [
+    8080,
+    8081,
+    9000,
+    9001,
+    9090
+  ],
+
+  "portsAttributes": {
+    "8080": {
+      "label": "Quasar Dev Server",
+      "onAutoForward": "notify"
+    },
+    "9000": {
+      "label": "Quasar SSR Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "postCreateCommand": "npm install -g @quasar/cli && npm install",
+
+  "remoteUser": "node",
+
+  "mounts": [
+    "source=${localWorkspaceFolder}/.vscode,target=/workspaces/${localWorkspaceFolderBasename}/.vscode,type=bind,consistency=cached"
+  ]
+}
+

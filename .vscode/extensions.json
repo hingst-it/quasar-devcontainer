@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "abdelaziz18003.quasar-snippets",
+    "eamodio.gitlens",
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "wix.vscode-import-cost",
+    "usernamehw.errorlens",
+    "oderwat.indent-rainbow",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "EditorConfig.EditorConfig",
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
+
