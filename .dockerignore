@@ -1,0 +1,167 @@
+# Ignore node_modules directory
+node_modules
+
+# Ignore build output directory
+dist
+
+# Ignore .htpasswd file
+.htpasswd
+
+# Ignore markdown files
+*.md
+
+# Ignore Prettier configuration file
+.prettierrc.json
+
+# Ignore ESLint configuration file
+eslint.config.js
+
+# Ignore EditorConfig configuration file
+.editorconfig
+
+# Ignore Git ignore file
+.gitignore
+
+# Ignore VSCode configuration directory
+.vscode
+
+# Ignore GitHub configuration directory
+.github
+
+# Ignore GitLab CI configuration file
+.gitlab-ci.yml
+
+# Ignore Dockerfile
+Dockerfile
+
+# Ignore Yarn lock file
+yarn.lock
+
+# Ignore npm lock file
+package-lock.json
+
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore cache files
+*.cache
+
+# Ignore backup files
+*.bak
+*.backup
+
+# Ignore swap files
+*.swp
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore test files
+*.test.js
+*.spec.js
+
+# Ignore coverage files
+coverage/
+*.coverage
+
+# Ignore documentation files
+docs/
+*.doc
+*.docx
+
+# Ignore virtual environment directories
+venv/
+.venv/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore IDE directories
+.idea/
+.vscode/
+
+# Ignore local development files
+local/
+dev/
+
+# Ignore temporary directories
+tmp/
+temp/
+
+# Ignore cache directories
+cache/
+.cache/
+
+# Ignore backup directories
+backup/
+.backup/
+
+# Ignore swap directories
+.swp/
+
+# Ignore OS-specific directories
+.DS_Store/
+Thumbs.db/
+
+# Ignore test directories
+test/
+tests/
+
+# Ignore coverage directories
+coverage/
+.coverage/
+
+# Ignore documentation directories
+docs/
+documentation/
+
+# Ignore virtual environment directories
+venv/
+.venv/
+
+# Ignore Python bytecode directories
+__pycache__/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore IDE directories
+.idea/
+.vscode/
+
+# Ignore local development directories
+local/
+dev/
+
+# Ignore temporary directories
+tmp/
+temp/
+
+# Ignore cache directories
+cache/
+.cache/
+
+# Ignore backup directories
+backup/
+.backup/
+
+# Ignore swap directories
+.swp/
+
+# Ignore OS-specific directories
+.DS_Store/
+Thumbs.db/
